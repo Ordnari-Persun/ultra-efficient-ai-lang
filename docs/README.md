@@ -12,7 +12,7 @@
 
 | 形式 | ファイル | 説明 |
 |------|---------|------|
-| PDF  | [UltraEfficientAI-Lang_v1.0_20250518.pdf](UltraEfficientAI-Lang_v1.0_20250518.pdf) | 50 ページ（図表・付録完備）の最終版 |
+| PDF  | [UltraEfficientAI-Lang_v1.0_20250518.pdf](./UltraEfficientAI-Lang_v1.0_20250518.pdf) | 50 ページ（図表・付録完備）の最終版 |
 
 > **注**: ブラウザー上で直接閲覧できない場合は右クリックで「リンク先を保存」してください。
 
