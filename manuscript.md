@@ -1137,13 +1137,62 @@ ISO 8601 参照：[https://www.iso.org/iso-8601-date-and-time-format.html](https
 
 Allen の 13 区間関係原子（第4.2節）における合成表をここに記載する。表の行の見出しを関係 $r\_1(i\_1, i\_2)$、列の見出しを関係 $r\_2(i\_2, i\_3)$ とした場合、表のセルは $i\_1$ と $i\_3$ の間に成立しうる関係の集合 $\\mathrm{Comp}(r\_1, r\_2)$ を示す。
 
-（ここにAllenの13x13合成表を挿入）
+
+| $r_1 \backslash r_2$ | **b**            | **m**            | **o**            | **s**     | **d**    | **f**    | **eq** | **si**             | **di**    | **fi**    | **bi**         | **mi**         | **oi**         |
+| -------------------- | ---------------- | ---------------- | ---------------- | --------- | -------- | -------- | ------ | ------------------ | --------- | --------- | -------------- | -------------- | -------------- |
+| **b**                | b                | b                | b                | b         | b        | b        | b      | b, o, d            | b, o, d   | b, o, d   | ALL            | bi             | bi, oi         |
+| **m**                | b                | b                | b                | b         | b        | b        | b      | b, o, d            | b, o, d   | b, o, d   | bi, mi         | bi, mi         | bi, mi, oi     |
+| **o**                | b, m, o          | b, m, o          | b, o, m, s, d, f | b, s, o   | b, d, o  | b, f, o  | b, o   | b, o, d, s, eq, si | b, o, d   | b, o, f   | bi, oi, mi     | bi, oi, mi     | bi, oi         |
+| **s**                | b, m             | b, m             | b, m, o          | s         | s, d     | s, f     | s, eq  | s, eq, si          | s, d      | s, f      | bi, mi         | bi, mi         | bi, oi, mi     |
+| **d**                | b, m, s, d, f, o | b, m, s, d, f, o | b, m, o, d, s, f | s, d      | d        | d, f     | d      | d, s, eq, si       | d         | d, f      | bi, mi, si, di | bi, mi, di     | bi, mi, oi, di |
+| **f**                | b, m, o, f       | b, m, o, f       | b, m, o, f       | s, f      | d, f     | f        | f      | f, si              | d, f      | f         | bi, mi, fi     | bi, mi, fi     | bi, mi, oi, fi |
+| **eq**               | b                | b                | b, o             | s         | d        | f        | eq     | si                 | di        | fi        | bi             | mi             | oi             |
+| **si**               | b, o, d, s       | b, o, d, s       | b, o, m, s, d, f | s, eq, si | d, s, si | f, s, si | si     | si, eq             | di, s, si | fi, s, si | bi, oi, mi     | bi, oi, mi     | bi, oi, mi     |
+| **di**               | b, o, d          | b, o, d          | b, o, d, m, s, f | d, s      | d        | d, f     | di     | di, s, si          | di        | di, f     | bi, oi, di, mi | bi, oi, di, mi | bi, oi, di, mi |
+| **fi**               | b, o, d, f       | b, o, d, f       | b, o, d, f, m, s | f, s      | d, f     | f        | fi     | fi, s, si          | fi, d     | fi        | bi, oi, fi, mi | bi, oi, fi, mi | bi, oi, fi, mi |
+| **bi**               | -                | -                | -                | -         | -        | -        | -      | b, o, d            | b, o, d   | b, o, d   | bi             | bi             | bi, oi         |
+| **mi**               | b                | -                | b                | b         | b        | b        | b      | b, o, d            | b, o, d   | b, o, d   | bi, mi         | bi, mi         | bi, mi, oi     |
+| **oi**               | b, m, o          | b, m, o          | b, o, m, s, d, f | b, s, o   | b, d, o  | b, f, o  | b, o   | b, o, d, s, eq, si | b, o, d   | b, o, f   | bi, oi, mi     | bi, oi, mi     | bi, oi         |
+
+> **凡例**
+> *b* = before, *m* = meets, *o* = overlaps, *s* = starts, *d* = during, *f* = finishes, *eq* = equals, *si* = started‐by, *di* = contains, *fi* = finished‐by, *bi* = after, *mi* = met‐by, *oi* = overlapped‐by
+
+
 
 **付録 C.2: RCC-8 領域関係合成表**
 
 RCC-8 の 8 領域関係原子（第5.2節）における合成表をここに記載する。表の行の見出しを関係 $r\_1(R\_1, R\_2)$、列の見出しを関係 $r\_2(R\_2, R\_3)$ とした場合、表のセルは $R\_1$ と $R\_3$ の間に成立しうる関係の集合 $\\mathrm{Comp}(r\_1, r\_2)$ を示す。
 
-（ここにRCC-8の8x8合成表を挿入）
+
+| *r₁ \ r₂* | **DC**       | **EC**       | **PO**       | **TPP**      | **NTPP**     | **TPPi**     | **NTPPi**    |
+| --------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| **DC**    | **DEPTNQtn** | **DEPTN**    | **DEPTN**    | **DEPTN**    | **DEPTN**    | **DE**       | **DE**       |
+| **EC**    | **DEPtn**    | **DE**       | **DEPTtQ**   | **DETN**     | **DETN**     | **DE**       | **DE**       |
+| **PO**    | **DEPtn**    | **DEPTNQtn** | **DEPTNQtn** | **DEPTNQtn** | **DEPTNQtn** | **DEPTNQtn** | **DEPTNQtn** |
+| **TPP**   | **D**        | **DE**       | **DEPTN**    | **TN**       | **N**        | **DEPTN**    | **Qt**       |
+| **NTPP**  | **D**        | **DE**       | **DEPTN**    | **TN**       | **N**        | **DEPTN**    | **DEPTNQtn** |
+| **TPPi**  | **DEPtn**    | **DEPtn**    | **DEPTQtn**  | **PTQtn**    | **PTNQtn**   | **TQtn**     | **TQtn**     |
+| **NTPPi** | **D**        | **DEPTN**    | **PQtn**     | **TNQn**     | **NQn**      | **Qtn**      | **Qn**       |
+
+### 略号凡例
+
+| 記号    | 完全名称                                                      |
+| ----- | --------------------------------------------------------- |
+| **D** | DC (Disconnected)                                         |
+| **E** | EC (Externally Connected)                                 |
+| **P** | PO (Partial Overlap)                                      |
+| **T** | TPP (Tangential Proper Part)                              |
+| **N** | NTPP (Non-Tangential Proper Part)                         |
+| **t** | TPPi (Inverse TPP – Tangential Proper Part Inverse)       |
+| **n** | NTPPi (Inverse NTPP – Non-Tangential Proper Part Inverse) |
+| **Q** | EQ (Equals)                                               |
+
+> **読み方例**
+> 行 **EC**, 列 **PO** のセル **DEPTtQ** は
+> $\mathrm{Comp}(\text{EC},\text{PO})=\{\text{DC, EC, PO, TPP, TPPi, EQ}\}$
+> を意味します。
+
+
 
 ---
 
@@ -1151,7 +1200,36 @@ RCC-8 の 8 領域関係原子（第5.2節）における合成表をここに�
 
 本付録では、本書で定義される主要な推論規則（Inference Rule）のリストを記載する。推論規則は、汎用規則、時間推論規則（TIR）、空間推論規則（QSR）、時空間推論規則、信頼度推論規則、信念改訂規則などを含む。各規則は形式的な前提と結論、およびユニフィケーション変数を示す。
 
-（ここに各章で定義される代表的推論規則を一覧化して記載）
+* **ID** … 便宜的に付けた識別子
+* **章** … 規則を最初に導入した章 (§)
+* **名称** … 規則の通称
+* **前提（Antecedent）／結論（Consequent）** … SSE での典型パターン（曖昧さ回避のため，一部だけ抜粋・簡略）
+* **概要** … 役割や意味づけ
+* **参照** … 本文中の節番号・図・式
+
+| ID      | 章  | 名称                  | 前提（Antecedent）                           | ⇒ | 結論（Consequent）               | 概要                                              | 参照          |
+| ------- | -- | ------------------- | ---------------------------------------- | - | ---------------------------- | ----------------------------------------------- | ----------- |
+| **T-1** | 4  | **Allen 合成規則**      | `R(a,b) ∧ S(b,c)`                        | ⇒ | `Comp(R,S)(a,c)`             | 区間関係のトランジティブ合成。Allen 13 原子の組合せを合成表で決定。          | §4.3, 表4-2  |
+| **T-2** | 4  | **Allen 逆転規則**      | `R(a,b)`                                 | ⇒ | `R⁻¹(b,a)`                   | 関係の converse （例：`BEFORE` ↔︎ `AFTER`）。           | §4.2        |
+| **S-1** | 5  | **RCC-8 合成規則**      | `r₁(A,B) ∧ r₂(B,C)`                      | ⇒ | `Comp(r₁,r₂)(A,C)`           | 領域関係のトランジティブ合成。付録 C.2 の 8 × 8 表を使用。             | §5.2, 付録C   |
+| **S-2** | 5  | **方向・距離ハイブリッド規則**   | `Dir(A,B)=N ∧ Dist(A,B)=Near`            | ⇒ | `RelPos(A,B)=NorthNear`      | 方向・距離の質的結合を 1 命題へ正規化。                           | §5.3.2      |
+| **G-1** | 6  | **汎用 Modus Ponens** | `φ₁,…,φₙ ⊢ ψ` （規則）<br>`φ₁ ∧ … ∧ φₙ`      | ⇒ | `ψ`                          | SSE 上の前向き推論（forward chaining）の基本形。              | §6.2        |
+| **G-2** | 6  | **信頼度伝播規則**         | `Conf(φ)=α ∧ Conf(ρ)=β`<br> ∧ `ρ: φ ⇒ ψ` | ⇒ | `Conf(ψ)=α⊗β`                | 述語信頼度と規則信頼度を代数 \$(K,⊗)\$ で合成。                   | §6.4 / §8.4 |
+| **G-3** | 6  | **矛盾検出 & TMS**      | `φ, ¬φ`                                  | ⇒ | `⊥` ⇒ 依存グラフ追跡                | Justification Graph を用い矛盾を検出，TMS でどの仮定を撤回するか決定。 | §6.5        |
+| **D-1** | 8  | **時間制約ネットワーク PC-2** | `TNet ⊩ new constraint`                  | ⇒ | `Propagate(TNet)`            | 新制約追加時に時間ネットワークを局所更新し一貫性を保つ。                    | §8.2        |
+| **D-2** | 8  | **空間制約 PC-2**       | `SNet ⊩ new constraint`                  | ⇒ | `Propagate(SNet)`            | RCC 制約ネットワーク版 PC-2。                             | §8.3        |
+| **D-3** | 8  | **信頼度縮退抑制**         | `ΔConf < ε`                              | ⇒ | *伝播をスキップ*                    | 変化量が閾値未満なら再計算を抑制し最適化。                           | §8.4.3      |
+| **Q-1** | 9  | **発話行為更新**          | `SA_K(User,Agent,illoc)`                 | ⇒ | `Update(DSM, illoc)`         | Speech-Act が観測されたら対話状態モデルを更新。                   | §9.2        |
+| **Q-2** | 9  | **照応解消規則**          | `Pronoun(p) ∧ Antecedent(c)`             | ⇒ | `Coref(p,c)`                 | 文脈スコア最大の候補を照応先にリンク。                             | §9.3        |
+| **Q-3** | 9  | **意図推論規則**          | `PlanLib(π) ∧ Match(π,utter)`            | ⇒ | `Intention(User,Goal(π))`    | 発話とプランライブラリ照合でユーザ意図を推定。                         | §9.4        |
+| **I-1** | 10 | **アジェンダ優先度規則**      | `Pri(φ)=p₁ > Pri(ψ)=p₂`                  | ⇒ | `Schedule(φ)` **before** `ψ` | オーケストレーターが発火順を決定。                               | §10.3       |
+
+> **備考**
+>
+> * ここでは「代表例」に絞り，詳細は各章の規則定義（図・表・コードリスト）を参照。
+> * 規則 ID は付録用の便宜的ラベル。実装時の識別子や図番号とは独立。
+
+
 
 ---
 
@@ -1172,6 +1250,4 @@ RCC-8 の 8 領域関係原子（第5.2節）における合成表をここに�
 * **SSE (Semantic Structure Expression):** 超高効率AI言語における、完全形式化された意味表現式。AIが内部的に保持・処理する知識、状況、意図などを統一的に記述する形式的文。(第1.3節, 第2章)  
 * **TIR (Temporal Inference Rule):** 時間関係原子間の合成など、時間に関する推論を行うための形式的な規則。(第4.3節)  
 * **TMS (Truth Maintenance System):** 知識ベース内の一貫性を維持し、矛盾の解消や信念の改訂を行うための機構。命題間の依存関係を追跡し、矛盾が発生した際にどの命題を撤回すべきかを決定する。(第6.5節, 第10.5節)
-
-（第1.3節で定義済みの用語を含む、本書全体の主要用語を追加・整理。最終的な収録用語と定義は組版時に確定。）
 
