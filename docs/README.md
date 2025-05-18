@@ -21,7 +21,7 @@
 ## 🔗 関連リンク
 
 * GitHub Pages 版（HTML）：<https://ordnari-persun.github.io/ultra-efficient-ai-lang/>
-* 制作ログ／解説記事（note）：（準備中）
+* 制作ログ／解説記事（note）：<https://note.com/cozy_fennel5886/n/n1a812b8076ab?sub_rt=share_pw>
 
 ---
 
